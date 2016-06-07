@@ -4,13 +4,13 @@ Official NodeJS client for [BotMetrics](https://bot-metrics.com). A tool for cha
 
 ### Installation
 
-```
+```bash
 npm install node-botmetrics --save
 ```
 
 ### Usage
 
-```
+```js
 var BotMetrics = require('node-botmetrics');
 var botmetrics = new BotMetrics(TOKEN); // API Token
 
@@ -25,7 +25,7 @@ botmetrics.track({
 
 #### Optional callback
 
-```
+```js
 botmetrics.track(message, function(err, msg) {
     if (err) return console.log(err);
     console.log('Message tracked => ', msg);
