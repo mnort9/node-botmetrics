@@ -1,0 +1,26 @@
+{
+  "name": "node-botmetrics",
+  "version": "0.0.1",
+  "description": "Official node client for BotMetrics, https://bot-metrics.com. A tool for chat bot analytics and conversation history.",
+  "main": "index.js",
+  "keywords": [
+    "bots",
+    "bot",
+    "analytics",
+    "facebook",
+    "fb",
+    "messenger",
+    "telegram",
+    "slack",
+    "kik"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnort9/node-botmetrics.git"
+  },
+  "author": "Matt Norton <mnort9@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.72.0"
+  }
+}
