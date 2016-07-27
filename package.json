@@ -21,9 +21,11 @@
   "author": "Matt Norton <mnort9@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
     "chai": "^3.5.0",
     "dotenv": "^2.0.0",
-    "mocha": "^2.5.3",
-    "request": "^2.72.0"
+    "mocha": "^2.5.3"
   }
 }
