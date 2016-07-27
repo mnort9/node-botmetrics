@@ -1,6 +1,6 @@
 {
   "name": "node-botmetrics",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Official NodeJS client for BotMetrics, https://bot-metrics.com. A tool for chat bot analytics and conversation history.",
   "main": "index.js",
   "keywords": [
