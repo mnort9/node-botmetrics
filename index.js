@@ -8,7 +8,7 @@ function BotMetrics(token, debug) {
     var self = this;
     
     this.track = function(data, cb) {
-        self._post(null, null, data);
+        self._post(null, null, data, cb);
     };
     
     this.facebook = {
