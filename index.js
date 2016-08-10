@@ -41,7 +41,7 @@ BotMetrics.prototype._post = function(messageType, platform, body, cb) {
     var self = this;
     request(options, function (err, res, body) {
         if (self.debug) {
-            if (err) return console.log('BotMetrics Error: ' + err);
+            if (err) console.log('BotMetrics Error: ' + err);
             if (body) console.log(util.inspect(body, { depth: null, colors: true }));
         }
 
