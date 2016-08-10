@@ -7,21 +7,23 @@ function BotMetrics(token, debug) {
     
     var self = this;
     
-    this.track = function(data) {
-        self._post(null, null, data);
+    this.track = function(data, cb) {
+        self._post(null, null, data, cb);
     };
     
     this.facebook = {
-        trackIncoming: function(data) {   
-            self._post('incoming', 'facebook', data);
+        trackIncoming: function(data, cb) {
+            self._post('incoming', 'facebook', data, cb);
         },
-        trackOutgoing: function(data) {
-            self._post('outgoing', 'facebook', data);
-        } 
+        trackOutgoing: function(data, cb) {
+            self._post('outgoing', 'facebook', data, cb);
+        }
     };
 }
 
-BotMetrics.prototype._post = function(messageType, platform, body) { 
+BotMetrics.prototype._post = function(messageType, platform, body, cb) {
+    var _cb = cb || function() {};
+
     var params = {
         token: this.token
     };
@@ -39,9 +41,11 @@ BotMetrics.prototype._post = function(messageType, platform, body) {
     var self = this;
     request(options, function (err, res, body) {
         if (self.debug) {
-            if (err) return console.log('BotMetrics Error: ' + err);
+            if (err) console.log('BotMetrics Error: ' + err);
             if (body) console.log(util.inspect(body, { depth: null, colors: true }));
         }
+
+        _cb(err);
     });
 };
 
